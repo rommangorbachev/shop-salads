@@ -1,0 +1,7 @@
+.wrapper-header {
+  background: #fefe20;
+}
+.bg-image {
+  background: url("https://thumbs.dreamstime.com/b/bowl-carrot-salad-yellow-background-korean-food-189189193.jpg") no-repeat right;
+  background-size: contain;
+}

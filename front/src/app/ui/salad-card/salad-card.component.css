@@ -1,0 +1,19 @@
+.card {
+  padding-top: 150px;
+  margin-bottom: 25px;
+  box-shadow: none;
+}
+
+.card-style {
+  background: rgb(255,255,255);
+  background: linear-gradient(140deg, rgba(255,255,255,0.23012955182072825) 0%, rgba(255,255,255,0.7987570028011204) 78%, rgba(254,248,2,1) 100%);
+}
+
+.img-styles{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
