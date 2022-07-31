@@ -14,6 +14,10 @@ const SaladSchema = new Schema({
         type: String,
         required: true
     },
+    price: {
+        type: Number,
+        require: true
+    }
 });
 
 const Salad = mongoose.model('Salad', SaladSchema);

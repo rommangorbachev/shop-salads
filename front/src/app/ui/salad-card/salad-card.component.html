@@ -1,10 +1,15 @@
-<div class="card card-style">
-  <img src="https://darngoodrecipes.com/wp-content/uploads/2022/01/Plate-of-Green-Salad-Recipe-Easy-500x500-1.jpg"
+<div class="card card-style h-100">
+  <img [src]="'http://localhost:8000/uploads/' + salad.image"
        class="card-img-top rounded-circle img-styles shadow-5-strong"
        alt="Fissure in Sandstone"/>
-  <div class="card-body pt-5">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card-body pt-5 d-flex flex-column">
+    <h5 class="card-title">{{ salad.title }}</h5>
+    <p class="card-text flex-grow-1">{{ salad.description }}</p>
+    <p>
+      <span>
+        {{ salad.price }} сом за кг
+      </span>
+    </p>
     <button type="button" class="btn btn-outline-dark btn-rounded" data-mdb-ripple-color="dark">Dark</button>
   </div>
 </div>
