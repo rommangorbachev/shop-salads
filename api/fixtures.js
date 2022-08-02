@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const config = require('./config');
 const Salad = require('./models/Salads');
+const User = require('./models/User');
+const {nanoid} = require('nanoid');
 
 
 
@@ -11,6 +13,24 @@ const run = async () => {
     for (let coll of collections) {
         await mongoose.connection.db.dropCollection(coll.name);
     }
+
+
+    const [ivan, roman] = await User.create({
+        email: 'ivan@gmail.com',
+        password: '123',
+        name: 'Ivan',
+        token: nanoid(),
+        avatar: 'ivan.png',
+        role: 'admin',
+    }, {
+        email: 'roman@gmail.com',
+        password: '123',
+        name: 'Roman',
+        avatar: 'roman.png',
+        token: nanoid(),
+        role: 'user',
+    });
+
 
     const [salad1, salad2] = await Salad.create({
         title: 'Овощной салат с кунжутом, по-корейски',

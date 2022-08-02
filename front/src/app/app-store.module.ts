@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ActionReducer, MetaReducer, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-
 import { localStorageSync } from 'ngrx-store-localstorage';
 import { SaladsEffects } from './store/salads/salads.effects';
 import { saladsReducer } from './store/salads/salads.reducer';
+import { usersReducer } from './store/users/users.reducer';
+import { UsersEffects } from './store/users/users.effects';
 
 
 const localStorageSyncReducer = (reducer: ActionReducer<any>) => {
@@ -16,11 +17,13 @@ const localStorageSyncReducer = (reducer: ActionReducer<any>) => {
 
 const metaReducers: MetaReducer[] = [localStorageSyncReducer];
 const reducers = {
-  salads: saladsReducer
+  salads: saladsReducer,
+  users: usersReducer
 };
 
 const effects = [
-  SaladsEffects
+  SaladsEffects,
+  UsersEffects
 ];
 
 @NgModule({

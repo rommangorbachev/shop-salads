@@ -25,10 +25,16 @@
               Корзина<span class="badge bg-danger ms-2">8</span>
             </a>
           </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0" *ngIf="!(user | async), else isUser">
           <li class="nav-item">
-            <a class="nav-link" href="#"></a>
+            <a class="nav-link" routerLink="login">Вход</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="register">Регистрация</a>
           </li>
         </ul>
+
       </div>
     </div>
   </nav>
@@ -46,3 +52,16 @@
   </router-outlet>
   </div>
 </main>
+
+<ng-template #isUser>
+  <div class="d-flex align-items-center">
+    <div>
+      <button class="btn btn-sm btn-rounded btn-primary" (click)="logout()">Выйти</button>
+    </div>
+    <img [src]="'http://localhost:8000/uploads/' + (user | async)?.avatar" alt="" style="width: 45px; height: 45px"
+         class="rounded-circle ms-3" />
+    <div class="ms-3 me-3">
+      <p class="fw-bold mb-1">{{ (user | async)?.name }}</p>
+    </div>
+  </div>
+</ng-template>

@@ -3,7 +3,8 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 const config = require('./config');
 
-const salads = require('./app/salads')
+const salads = require('./app/salads');
+const users = require('./app/users');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/salads', salads);
+app.use('/users', users);
 
 
 const run = async () => {

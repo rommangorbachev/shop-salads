@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SaladsPageComponent } from './pages/salads-page/salads-page.component';
 import { BasketComponent } from './ui/basket/basket.component';
+import { CenteredCardComponent } from './ui/centered-card/centered-card.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { BasketComponent } from './ui/basket/basket.component';
     HeaderComponent,
     MainComponent,
     SaladsPageComponent,
-    BasketComponent
+    BasketComponent,
+    CenteredCardComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

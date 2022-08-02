@@ -1,0 +1,36 @@
+<app-centered-card title="Вход">
+<form #f="ngForm" class="text-center" (ngSubmit)="login()" novalidate>
+  <div class="input-group mb-3">
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Введите адрес электронной почты"
+      aria-label="email"
+      aria-describedby="basic-addon1"
+      ngModel
+      #email="ngModel"
+      name="email"
+      email
+      required
+    />
+    <div class="valid-feedback">Ок!</div>
+    <div class="invalid-feedback">Неверно введен адрес</div>
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Введите пароль"
+      aria-label="password"
+      aria-describedby="basic-addon2"
+      ngModel
+      #password="ngModel"
+      name="password"
+      required
+    />
+    <div class="valid-feedback">Looks good!</div>
+  </div>
+  <button class="btn btn-outline-success btn-rounded" data-mdb-ripple-color="success" type="submit">войти</button>
+</form>
+</app-centered-card>
