@@ -8,13 +8,17 @@ import { MainComponent } from './pages/main/main.component';
 import { AppStoreModule } from './app-store.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SaladsPageComponent } from './pages/salads-page/salads-page.component';
+import { BasketComponent } from './ui/basket/basket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SaladCardComponent,
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    SaladsPageComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
